@@ -1,1 +1,21 @@
-<p>categories works!</p>
+<div class="container py-3">
+    <h5>All Categories</h5>
+    <div *ngIf="isLoading" class="text-center">
+      <p>Loading categories...</p>
+    </div>
+  
+    <div *ngIf="error" class="text-center text-danger">
+      <p>{{ error }}</p>
+    </div>
+  
+    <div *ngIf="!isLoading && !error" class="d-flex flex-wrap">
+      <div class="col-4 col-md-3 mx-1" *ngFor="let category of categories">
+        <div class="category-card border py-2 px-3 mb-3 text-center">
+          <a href="#">
+            <p class="text-capitalize category" style="margin-bottom: 0;">{{ category }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
