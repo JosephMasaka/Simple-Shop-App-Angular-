@@ -1,0 +1,100 @@
+<section class="container showcase banner-home-page">
+    <div class="user-info py-2">
+        <h1>Hi Tosh!</h1>
+    </div>
+    <div class="d-flex">
+        <div class="logo col-2">
+            <img class="img-fluid" src="assets/logos/kyosk.png" alt="logo">
+        </div>
+        <div class="search col-10 position-relative">
+            <input type="text" class="form-control" placeholder="Search">
+            <i class="fas fa-search position-absolute top-50 translate-middle-y end-0 me-3"></i>
+        </div>
+    </div>
+
+    <div class="banner-slider py-3">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+           
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image: url('assets/images/slider.gif')">
+                <div class="carousel-caption">
+                  
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image: url('assets/images/slider-2.png')">
+                <div class="carousel-caption">
+                  
+                  
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image: url('assets/images/slider-3.jpg')">
+                <div class="carousel-caption">
+                  
+                  
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image: url('assets/images/slider-4.jpg')">
+                <div class="carousel-caption">
+                  
+                </div>
+              </div>
+            </div>
+            
+        </div>
+        <h3 class="banner-heading pt-3">Lorem ipsum KSH 1000</h3>
+        <p class="banner-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, optio. Lorem ipsum </p>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="container py-3">
+      <div class="d-flex justify-content-between">
+        <h5>Categories</h5>
+        <a href="#">View all</a>
+      </div>
+      <div class="row overflow-scroll hidden-scrollbar">
+        <!-- Loading spinner -->
+        <div *ngIf="isLoading" class="col-12 text-center">
+          <p>Loading categories...</p>
+        </div>
+  
+        <!-- Error message -->
+        <div *ngIf="error" class="col-12 text-center text-danger">
+          <p>{{ error }}</p>
+        </div>
+  
+        <!-- Categories list -->
+        <div *ngIf="!isLoading && !error" class="d-flex my-2">
+          <div class="col-4 col-md-3 mx-1" *ngFor="let category of categories">
+            <div class="category-card border py-2 px-3 mb-3 text-center">
+                <a href="">
+                    <p class="text-capitalize category" style="margin-bottom: 0;">{{ category }}</p>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="food-products">
+    <div class="d-flex justify-content-between">
+        <h5>Electronics</h5>
+        <a href="#">View all</a>
+    </div>
+    <div>
+        <!-- Electronics Products-->
+    </div>
+</section>
+
+<section class="food-products">
+    <div class="d-flex justify-content-between">
+        <h5>Jewellery</h5>
+        <a href="#">View all</a>
+    </div>
+    <div>
+        <!-- Electronics Products-->
+    </div>
+</section>
+  
+  
