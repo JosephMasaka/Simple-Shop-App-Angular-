@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'; 
+import { RouterModule } from '@angular/router';
 // import { SwiperModule } from 'swiper/angular'; // Import SwiperModule from v9
 // import SwiperCore, { Navigation, Pagination } from 'swiper'; // Import Swiper Core and modules
 
@@ -10,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, HttpClientModule], // Use HttpClientModule instead of HttpClient
+  imports: [CommonModule, HttpClientModule, RouterModule], // Use HttpClientModule instead of HttpClient
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
 })
