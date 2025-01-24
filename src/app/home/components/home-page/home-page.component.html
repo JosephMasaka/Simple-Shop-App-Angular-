@@ -77,24 +77,61 @@
     </div>
 </section>
 
-<section class="food-products">
+<section class="food-products container">
     <div class="d-flex justify-content-between">
-        <h5>Electronics</h5>
-        <a href="#">View all</a>
+      <h5>Electronics</h5>
+      <a href="#">View all</a>
     </div>
-    <div>
-        <!-- Electronics Products-->
-    </div>
-</section>
-
-<section class="food-products">
-    <div class="d-flex justify-content-between">
-        <h5>Jewellery</h5>
-        <a href="#">View all</a>
-    </div>
-    <div>
-        <!-- Electronics Products-->
-    </div>
-</section>
+    <div class="row overflow-scroll hidden-scrollbar">
+      <!-- Loading spinner -->
+      <div *ngIf="isLoadingElectronics" class="col-12 text-center">
+        <p>Loading electronics...</p>
+      </div>
   
+      <!-- Error message -->
+      <div *ngIf="error && !isLoadingElectronics" class="col-12 text-center text-danger">
+        <p>{{ error }}</p>
+      </div>
+  
+      <!-- Electronics Products -->
+      <div *ngIf="!isLoadingElectronics && !error" class="d-flex my-2">
+        <div class="col-4 col-md-3 mx-1" *ngFor="let product of electronics">
+          <div class="product-card border py-2 px-3 mb-3 text-center">
+            <img [src]="product.image" alt="{{ product.title }}" class="img-fluid mb-2" style="height: 100px; object-fit: contain;">
+            <p class="text-truncate" style="margin-bottom: 0;">{{ product.title }}</p>
+            <p class="price fw-bold text-success">{{ product.price | currency }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="food-products container">
+    <div class="d-flex justify-content-between">
+      <h5>Jewellery</h5>
+      <a href="#">View all</a>
+    </div>
+    <div class="row overflow-scroll hidden-scrollbar">
+      <!-- Loading spinner -->
+      <div *ngIf="isLoadingJewellery" class="col-12 text-center">
+        <p>Loading jewellery...</p>
+      </div>
+  
+      <!-- Error message -->
+      <div *ngIf="error && !isLoadingJewellery" class="col-12 text-center text-danger">
+        <p>{{ error }}</p>
+      </div>
+  
+      <!-- Jewellery Products -->
+      <div *ngIf="!isLoadingJewellery && !error" class="d-flex my-2">
+        <div class="col-4 col-md-3 mx-1" *ngFor="let product of jewellery">
+          <div class="product-card border py-2 px-3 mb-3 text-center">
+            <img [src]="product.image" alt="{{ product.title }}" class="img-fluid mb-2" style="height: 100px; object-fit: contain;">
+            <p class="text-truncate" style="margin-bottom: 0;">{{ product.title }}</p>
+            <p class="price fw-bold text-success">{{ product.price | currency }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   

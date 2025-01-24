@@ -51,13 +51,13 @@
     margin: 0;
 }
 
-.categories h5{
+.categories h5, .food-products h5{
     font-size: 15px;
     font-weight: bold;
     color: #5B5B5B;
 }
 
-.categories a {
+.categories a, .food-products a {
     text-decoration: none;
     font-size: 13px;
 }
@@ -75,3 +75,13 @@
 .hidden-scrollbar::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Edge */
 }
+
+.product-card img {
+    max-height: 150px;
+    object-fit: cover;
+  }
+  
+  .product-card {
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
