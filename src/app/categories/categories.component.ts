@@ -1,14 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @Component({
   selector: 'app-categories',
-  templateUrl: '<h1>Categories Page</h1>',
+  standalone: true,
+  templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css'],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, HttpClientModule],
 })
 export class CategoriesComponent implements OnInit {
-  category!: string;
+  categoriesList: string[] = [];
   products: any[] = [];
   isLoading = true;
   error: string | null = null;
@@ -17,7 +22,7 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-      this.category = params.get('category')!;
+      // this.categories = params.get('category')!;
       this.fetchCategories();
     });
   }
@@ -26,7 +31,7 @@ export class CategoriesComponent implements OnInit {
     const apiUrl = `https://fakestoreapi.com/products/categories`;
     this.http.get<any[]>(apiUrl).subscribe({
       next: (response) => {
-        this.products = response;
+        this.categoriesList = response;
         this.isLoading = false;
       },
       error: (err) => {

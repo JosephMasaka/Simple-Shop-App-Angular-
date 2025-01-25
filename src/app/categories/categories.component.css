@@ -1,0 +1,27 @@
+.category-card a{
+    text-decoration: none;
+}
+
+.category-card {
+
+}
+
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .text-primary {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  

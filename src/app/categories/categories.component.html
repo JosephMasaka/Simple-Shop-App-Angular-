@@ -8,9 +8,9 @@
       <p>{{ error }}</p>
     </div>
   
-    <div *ngIf="!isLoading && !error" class="d-flex flex-wrap">
-      <div class="col-4 col-md-3 mx-1" *ngFor="let category of categories">
-        <div class="category-card border py-2 px-3 mb-3 text-center">
+    <div *ngIf="!isLoading && !error" class="d-flex flex-wrap flex-row">
+      <div class="col-4 col-md-3 mx-1" *ngFor="let category of categoriesList">
+        <div class="category-card border py-2 px-3 mb-3 text-center rounded">
           <a href="#">
             <p class="text-capitalize category" style="margin-bottom: 0;">{{ category }}</p>
           </a>
@@ -18,4 +18,4 @@
       </div>
     </div>
   </div>
-  
+  <!-- <router-outlet></router-outlet> -->

@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CategoriesComponent } from './categories.component';
+// import { NgModule } from '@angular/core';
+// import { RouterModule, Routes } from '@angular/router';
+// import { CategoriesComponent } from './categories.component';
 
-const routes: Routes = [
-  { path: '', component: CategoriesComponent }, // Route for CategoriesComponent
-];
+// const routes: Routes = [
+//   { path: '', component: CategoriesComponent }, // Route for CategoriesComponent
+// ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-})
-export class CategoriesRoutingModule {}
+// @NgModule({
+//   imports: [RouterModule.forChild(routes)],
+//   exports: [RouterModule],
+// })
+// export class CategoriesRoutingModule {}
