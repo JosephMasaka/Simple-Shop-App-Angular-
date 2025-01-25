@@ -99,3 +99,16 @@
     left: 0;
     width: 100%;
 }
+
+.nav-custom a {
+    text-decoration: none;
+}
+
+.nav-custom i {
+    font-size: 30px;
+    margin: auto;
+}
+
+.nav-custom h6 {
+    font-size: 14px !important;
+}
